@@ -13,11 +13,12 @@ pipeline{
             }
         }
         stage("build Docker image"){
+            steps{
             sh'''
                 docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} -t ${IMAGE_NAME}:latest .
-            '''
+                '''
+            }
         }
-        
         stage("push"){
             steps{
                 withCredentials([
@@ -25,7 +26,7 @@ pipeline{
                 ])
             }
         }
-        
+
         STAGE("DEPLOY"){
             steps{
                 sh'''
