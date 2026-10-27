@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'noushinraza7/php-jenkins-demo'
-        CONTAINER_NAME = 'php-jenkins-app'
+        IMAGE_NAME = 'noushinraza7/flask-jenkins-demo'
+        CONTAINER_NAME = 'php-demo'
         APP_PORT = '9000'
     }
 
