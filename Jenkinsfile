@@ -9,7 +9,7 @@ pipeline{
     stages{
         stage("checkout"){
             steps{
-                git branch:'main', url:https:'//github.com/noushinraza7/php-jenkins-app.git'
+                git branch:'main', url:'https://github.com/noushinraza7/php-jenkins-app.git'
             }
         }
         stage("build Docker image"){
